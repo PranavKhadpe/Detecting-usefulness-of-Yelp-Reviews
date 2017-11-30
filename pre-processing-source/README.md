@@ -19,14 +19,19 @@ Removes reviews written before 2015 and after 2017 based on epoch times.
 
 ## How to use
 
-The first three folders are only so that the data can be seen and analysed at each filtering step. The filtering code is compiled into 1 file (secondfilt.py). Fields that we do not use are removed by throw_out_unnec.py, since we are only concerned about the text of the review and number of useful votes it received after the filtering is done.
+The first three folders can be run one after the other so that the data can be seen and analysed at each filtering step. The filtered data then needs to be run through secondfilt.py to remove reviews that were never seen and also to cluster the useful votes to create bins. 
 
-second_filt.py also contains k means clustering for the useful votes. k means does not sort the bins it generates according to the votes. We do that manually in changingbin.py
+Fields that we do not use are removed by throw_out_unnec.py, since we are only concerned about the text of the review and number of useful votes it received after the filtering is done.
+
+second_filt.py contains k-means clustering for the useful votes. k-means does not sort the bins it generates according to the votes. We do that manually in changingbin.py
 
 At every step, whenever there is a need to convert from json format to csv, we use json_to_csv.py
 
 All file addresses need to be modified according to where you store your files in your local system.
 So the order in which this must be deployed is:
+* Run the files in the folder time_filter
+* Run the langident.py code
+* Run rest_filter files
 * Run secondfilt.py
 * Run throw_out_unnec.py
 * Run changingbin.py
