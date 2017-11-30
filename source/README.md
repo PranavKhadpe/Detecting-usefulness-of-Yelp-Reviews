@@ -12,4 +12,6 @@ Once you have the features stored, run this file to train SVM one vs one, SVM on
 
 This code takes as input predicted.csv and tells you how many were predicted correctly and off by 1,2 so on. This enables you to have a clearer idea of where the misclassification is occuring, and if the results are actually useful (which they turn out to be!)
 
+## gnb_binary.py
 
+This code runs the gaussian naive bayes classifier for a binary classification of the reviews. The accuracy should be around 72%. Precision and recall can be calculated from 'predicted.csv'.
