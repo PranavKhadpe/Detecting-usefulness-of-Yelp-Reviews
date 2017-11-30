@@ -10,7 +10,7 @@ These codes were used to filter out data based on four criterion:
 
 Contains a python code to remove non-English reviews using the langid classifier
 
-##restaurant_filter
+## restaurant_filter
 Only keeps reviews written for restaurants. This is done by comparing the business ids of the reviews with the business ids of restaurants found in the business.json file of the yelp dataset.
 
 ## time_filter
