@@ -2,7 +2,7 @@
 
 These files are used for running the classifiers and observing the results
 
-Please note that LIWC features are proprietary. We have hence not included the code for their extraction. You need to obtain the license and extract the features for the reviews, and then store them in a file called 'input_par.csv' in the same order as the reviews.
+Please note that LIWC features are proprietary. We have hence not included the code for their extraction. You need to obtain the license and extract the features for the reviews if your dataset is different, and then store them in a file called 'input_par.csv' in the same order as the reviews. You can use the LIWC features extracted for our randomly sampled and filtered dataset (clean_sample.json) found in the 'data' folder if you don't have the license and are willing to use our data.
 
 ## ManyClassifiers.py
 
