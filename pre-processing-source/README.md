@@ -6,14 +6,14 @@ These codes were used to filter out data based on four criterion:
 3) Reviews that had 0 useful, funny and cool votes were removed to ensure all reviews were seen atleast once
 4) Non-English reviews were removed
 
-##lang_filter 
+## lang_filter 
 
 Contains a python code to remove non-English reviews using the langid classifier
 
 ##restaurant_filter
 Only keeps reviews written for restaurants. This is done by comparing the business ids of the reviews with the business ids of restaurants found in the business.json file of the yelp dataset.
 
-##time_filter
+## time_filter
 
 Removes reviews written before 2015 and after 2017 based on epoch times.
 
@@ -30,3 +30,5 @@ So the order in which this must be deployed is:
 * Run secondfilt.py
 * Run throw_out_unnec.py
 * Run changingbin.py
+
+Plus you can see the filtered output at each stage using the first three folders' codes.
