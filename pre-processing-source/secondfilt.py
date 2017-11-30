@@ -6,6 +6,7 @@ from sklearn.cluster import KMeans
 df = pd.read_csv('epoch_rev.csv')
 print "data loaded"
 
+## Only use the following if you have already run langident.py
 df = df[df.review_id != 'P2jAYuFRS1qk87Exw0ypSw']
 df.drop('language', axis = 1)
 print "dropped language"
@@ -15,10 +16,12 @@ df = df[(df.useful + df.funny + df.cool) > 0]
 print "dropped unread"
 print "\n", len(df.index)
 
+## Only use the following if epoch time is already stored in another column. 
+## There is no need to run this if you have already used epoch_remove.py
 # dropping all new reviews i.e. starting january 2017
-df = df[df.epoch_time < 1483142400]
-print "dropped new reviews"
-print "\n", len(df.index)
+# df = df[df.epoch_time < 1483142400]
+# print "dropped new reviews"
+# print "\n", len(df.index)
 
 # tabulate distribution of frequency vs number of votes
 df_2 = pd.value_counts(df.useful).to_frame().reset_index()
